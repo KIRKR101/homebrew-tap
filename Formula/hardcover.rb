@@ -11,7 +11,7 @@ class Hardcover < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/KIRKR101/hardcover-cli/releases/download/v0.1.0/hardcover-cli_0.1.0_darwin_amd64.tar.gz"
-      sha256 "3649193280f73a7c8c5e30942e4d9f0eabd3c21a7baec88e057e3bd2cae73a4d"
+      sha256 "62d370ea00cc6c183530b01daf947bd360252c5889d6f5b709d664f58791c57c"
 
       define_method(:install) do
         bin.install "hardcover"
@@ -19,7 +19,7 @@ class Hardcover < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/KIRKR101/hardcover-cli/releases/download/v0.1.0/hardcover-cli_0.1.0_darwin_arm64.tar.gz"
-      sha256 "ad542bba6e912228d40e956947f6b6642eb3e8daa6a93ec39827dc9dd87a3761"
+      sha256 "5c87122641eee7819597f4a8fd04767909cbfd535ef78dc4093a234260f52c6f"
 
       define_method(:install) do
         bin.install "hardcover"
@@ -30,14 +30,14 @@ class Hardcover < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/KIRKR101/hardcover-cli/releases/download/v0.1.0/hardcover-cli_0.1.0_linux_amd64.tar.gz"
-      sha256 "c445ffeeff8ea98631cf7c2d6d7ce1c6c976cf058c42a939b1b3951ed7b3d7c0"
+      sha256 "75543ee94ce13ac4d9c0eb9974483ac6b8779bbe2bfb37e9b0d1e275965ab87b"
       define_method(:install) do
         bin.install "hardcover"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/KIRKR101/hardcover-cli/releases/download/v0.1.0/hardcover-cli_0.1.0_linux_arm64.tar.gz"
-      sha256 "ff8f99a9628ec53db281d0748fbef87f9a1cf103232bcabfab53ad804dcd1494"
+      sha256 "939d936548c376139be91b96784558eb25590dd9bee6dba7c420545789287b57"
       define_method(:install) do
         bin.install "hardcover"
       end
