@@ -1,9 +1,9 @@
 cask "wasmagick" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.0.1"
-  sha256 arm:   "ba9f3ebaaf7fed88ccda511d094c23932524b1331373500144ce20f7dc0c2c8e",
-         intel: "a076dda2a196741dade0b54d19d4157a13ab4abd5fe75d5f84b59655723fcc92"
+  version "0.0.2"
+  sha256 arm:   "a6cde0df356b099327c3ef21062c08ca33c191c4b9c25871b5483d25cfc4a19e",
+         intel: "9e5a95a65f15564c96d682e71b97ca69e22c196a18a24be2a2a3b4314a04a979"
 
   url "https://github.com/KIRKR101/wasmagick/releases/download/v#{version}/WASMagick-#{version}-#{arch}.dmg",
       verified: "github.com/KIRKR101/"
@@ -14,6 +14,13 @@ cask "wasmagick" do
   depends_on macos: :monterey
 
   app "WASMagick.app"
+
+  caveats <<~EOS
+    The app is unsigned, so macOS may report it as "damaged" on first launch.
+    Fix it by removing the quarantine flag:
+
+      xattr -dr com.apple.quarantine "/Applications/WASMagick.app"
+  EOS
 
   zap trash: [
     "~/Library/Application Support/WASMagick",
