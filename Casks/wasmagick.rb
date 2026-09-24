@@ -1,9 +1,9 @@
 cask "wasmagick" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.0.5"
-  sha256 arm:   "ca4f384430614589082fca04444a3d096d647d4c70f1c5f9ef65f9da79765891",
-         intel: "6c6a14bfc467518168215f00facc34d875720c4acf5814825c093fc70022c594"
+  version "0.0.6"
+  sha256 arm:   "a81b8e344532942f945af10118b1b6bb0d476ddae1b49221e6071af174ce3da6",
+         intel: "597a1b3041da33a550f5d54ae22472540ba42cb90ed88cecf3755baa97c34404"
 
   url "https://github.com/KIRKR101/wasmagick/releases/download/v#{version}/WASMagick-#{version}-#{arch}.dmg",
       verified: "github.com/KIRKR101/"
